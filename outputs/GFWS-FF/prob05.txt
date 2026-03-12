@@ -1,0 +1,190 @@
+tonies2003@DESKTOP-P559TC6:~/planners/downward$ ./fast-downward.py \                                                    "/mnt/c/Users/tonie/Documents/UNIR/Razonamiento y Planificación Automática/Actividad 3/rpa-logistics/domain.pddl" \
+"/mnt/c/Users/tonie/Documents/UNIR/Razonamiento y Planificación Automática/Actividad 3/rpa-logistics/prob05.pddl" \
+--search "eager_greedy([ff()], preferred=[ff()])"
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python3 -m translate '/mnt/c/Users/tonie/Documents/UNIR/Razonamiento y Planificación Automática/Actividad 3/rpa-logistics/domain.pddl' '/mnt/c/Users/tonie/Documents/UNIR/Razonamiento y Planificación Automática/Actividad 3/rpa-logistics/prob05.pddl' --sas-file output.sas
+Parsing...
+Parsing: [0.010s CPU, 0.039s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.005s wall-clock]
+Preparing model... [0.000s CPU, 0.003s wall-clock]
+Generated 51 rules.
+Computing model... [0.020s CPU, 0.016s wall-clock]
+681 relevant atoms
+780 auxiliary atoms
+1461 final queue length
+1699 total queue pushes
+Completing instantiation... [0.000s CPU, 0.010s wall-clock]
+Instantiating: [0.020s CPU, 0.035s wall-clock]
+Computing fact groups...
+Finding invariants...
+6 initial candidates
+Finding invariants: [0.000s CPU, 0.002s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.001s wall-clock]
+Choosing groups...
+0 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.005s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Processing axioms: [0.000s CPU, 0.001s wall-clock]
+Translating task: [0.010s CPU, 0.008s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+16 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.005s wall-clock]
+Reordering and filtering variables...
+16 of 16 variables necessary.
+0 of 16 mutex groups necessary.
+342 of 342 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.002s wall-clock]
+Translator variables: 16
+Translator derived variables: 0
+Translator facts: 151
+Translator goal facts: 4
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 342
+Translator axioms: 0
+Translator task size: 1445
+Translator peak memory: 30056 KB
+Writing output... [0.000s CPU, 0.004s wall-clock]
+Done! [0.060s CPU, 0.104s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/tonies2003/planners/downward/builds/release/bin/downward --search 'eager_greedy([ff()], preferred=[ff()])' --internal-plan-file sas_plan < output.sas
+[t=0.000568s, 10024 KB] Search code revision: 8435bcb98
+[t=0.000815s, 10024 KB] reading input...
+[t=0.002485s, 10024 KB] done reading input!
+[t=0.005032s, 10420 KB] Simplifying 342 unary operators... done! [342 unary operators]
+[t=0.005243s, 10420 KB] time to simplify: 0.000288s
+[t=0.005363s, 10420 KB] Initializing additive heuristic...
+[t=0.005396s, 10420 KB] Initializing FF heuristic...
+[t=0.005557s, 10420 KB] Simplifying 342 unary operators... done! [342 unary operators]
+[t=0.005805s, 10420 KB] time to simplify: 0.000285s
+[t=0.005862s, 10420 KB] Initializing additive heuristic...
+[t=0.005910s, 10420 KB] Initializing FF heuristic...
+[t=0.006011s, 10420 KB] Building successor generator... done!
+[t=0.006284s, 10552 KB] peak memory difference for successor generator creation: 132 KB
+[t=0.006364s, 10552 KB] time for successor generation creation: 0.000164s
+[t=0.006392s, 10552 KB] Variables: 16
+[t=0.006405s, 10552 KB] FactPairs: 151
+[t=0.006417s, 10552 KB] Bytes per state: 8
+[t=0.006441s, 10552 KB] Conducting best first search without reopening closed nodes, (real) bound = 2147483647
+[t=0.006550s, 10552 KB] New best heuristic value for ff: 22
+[t=0.006615s, 10552 KB] g=0, 1 evaluated, 0 expanded
+[t=0.006681s, 10552 KB] Initial heuristic value for ff: 22
+[t=0.006767s, 10552 KB] pruning method: none
+[t=0.006893s, 10552 KB] New best heuristic value for ff: 21
+[t=0.006973s, 10552 KB] g=1, 10 evaluated, 1 expanded
+[t=0.007230s, 10552 KB] New best heuristic value for ff: 20
+[t=0.007280s, 10552 KB] g=2, 32 evaluated, 2 expanded
+[t=0.007495s, 10552 KB] New best heuristic value for ff: 19
+[t=0.007543s, 10552 KB] g=3, 53 evaluated, 3 expanded
+[t=0.007807s, 10552 KB] New best heuristic value for ff: 18
+[t=0.007855s, 10552 KB] g=4, 78 evaluated, 4 expanded
+[t=0.008067s, 10552 KB] New best heuristic value for ff: 17
+[t=0.008122s, 10552 KB] g=5, 100 evaluated, 5 expanded
+[t=0.008390s, 10552 KB] New best heuristic value for ff: 16
+[t=0.008439s, 10552 KB] g=6, 123 evaluated, 6 expanded
+[t=0.008751s, 10552 KB] New best heuristic value for ff: 15
+[t=0.008813s, 10552 KB] g=7, 157 evaluated, 7 expanded
+[t=0.009024s, 10552 KB] New best heuristic value for ff: 14
+[t=0.009072s, 10552 KB] g=8, 179 evaluated, 8 expanded
+[t=0.009242s, 10552 KB] New best heuristic value for ff: 13
+[t=0.009294s, 10552 KB] g=9, 193 evaluated, 9 expanded
+[t=0.009507s, 10552 KB] New best heuristic value for ff: 12
+[t=0.009555s, 10552 KB] g=10, 212 evaluated, 10 expanded
+[t=0.009744s, 10552 KB] New best heuristic value for ff: 11
+[t=0.009791s, 10552 KB] g=11, 227 evaluated, 11 expanded
+[t=0.009995s, 10552 KB] New best heuristic value for ff: 10
+[t=0.010047s, 10552 KB] g=12, 247 evaluated, 12 expanded
+[t=0.010243s, 10552 KB] New best heuristic value for ff: 9
+[t=0.010307s, 10552 KB] g=13, 260 evaluated, 13 expanded
+[t=0.010503s, 10552 KB] New best heuristic value for ff: 8
+[t=0.010551s, 10552 KB] g=14, 280 evaluated, 14 expanded
+[t=0.010737s, 10552 KB] New best heuristic value for ff: 7
+[t=0.010785s, 10552 KB] g=15, 300 evaluated, 15 expanded
+[t=0.010994s, 10552 KB] New best heuristic value for ff: 6
+[t=0.011046s, 10552 KB] g=16, 326 evaluated, 16 expanded
+[t=0.011228s, 10552 KB] New best heuristic value for ff: 5
+[t=0.011278s, 10552 KB] g=17, 343 evaluated, 17 expanded
+[t=0.011466s, 10552 KB] New best heuristic value for ff: 4
+[t=0.011514s, 10552 KB] g=18, 363 evaluated, 18 expanded
+[t=0.011743s, 10552 KB] New best heuristic value for ff: 3
+[t=0.011797s, 10552 KB] g=19, 395 evaluated, 20 expanded
+[t=0.012010s, 10552 KB] New best heuristic value for ff: 2
+[t=0.012137s, 10552 KB] g=20, 418 evaluated, 21 expanded
+[t=0.012398s, 10552 KB] New best heuristic value for ff: 1
+[t=0.012563s, 10552 KB] g=21, 439 evaluated, 22 expanded
+[t=0.013074s, 10552 KB] New best heuristic value for ff: 0
+[t=0.013264s, 10552 KB] g=22, 455 evaluated, 23 expanded
+[t=0.013575s, 10552 KB] Solution found!
+[t=0.013664s, 10552 KB] Actual search time: 0.006933s
+load-truck package4 truck2 city8-1 (1)
+drive-truck truck2 city8-1 city8-2 city8 (1)
+unload-truck package4 truck2 city8-2 (1)
+load-truck package3 truck11 city9-1 (1)
+drive-truck truck11 city9-1 city9-2 city9 (1)
+unload-truck package3 truck11 city9-2 (1)
+load-airplane package4 plane1 city8-2 (1)
+load-airplane package2 plane1 city8-2 (1)
+fly-airplane plane1 city8-2 city2-2 (1)
+unload-airplane package4 plane1 city2-2 (1)
+fly-airplane plane1 city2-2 city3-2 (1)
+unload-airplane package2 plane1 city3-2 (1)
+load-truck package2 truck1 city3-2 (1)
+drive-truck truck1 city3-2 city3-1 city3 (1)
+unload-truck package2 truck1 city3-1 (1)
+fly-airplane plane1 city3-2 city6-2 (1)
+load-airplane package1 plane1 city6-2 (1)
+fly-airplane plane1 city6-2 city9-2 (1)
+load-airplane package3 plane1 city9-2 (1)
+unload-airplane package1 plane1 city9-2 (1)
+fly-airplane plane1 city9-2 city7-2 (1)
+unload-airplane package3 plane1 city7-2 (1)
+[t=0.013766s, 10552 KB] Plan length: 22 step(s).
+[t=0.013766s, 10552 KB] Plan cost: 22
+[t=0.013766s, 10552 KB] Expanded 24 state(s).
+[t=0.013766s, 10552 KB] Reopened 0 state(s).
+[t=0.013766s, 10552 KB] Evaluated 455 state(s).
+[t=0.013766s, 10552 KB] Evaluations: 478
+[t=0.013766s, 10552 KB] Generated 523 state(s).
+[t=0.013766s, 10552 KB] Dead ends: 0 state(s).
+[t=0.013766s, 10552 KB] Number of registered states: 455
+[t=0.013766s, 10552 KB] Int hash set load factor: 455/512 = 0.888672
+[t=0.013766s, 10552 KB] Int hash set resizes: 9
+[t=0.013766s, 10552 KB] Search time: 0.007326s
+[t=0.013766s, 10552 KB] Total time: 0.013766s
+Solution found.
+Peak memory: 10552 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+INFO     Planner time: 0.35s
